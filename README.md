@@ -1,43 +1,98 @@
-# Astro Starter Kit: Minimal
+# Programación y Plataformas Web
+Astro: Desarrollo Web Moderno
+<div align="center"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/astro/astro-original-wordmark.svg" width="80" alt="Astro Logo"> </div> 
 
-```sh
-pnpm create astro@latest -- --template minimal
-```
+## Práctica 02: Fundamentos de Astro
+Autor
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Josue Abad
 
-## 🚀 Project Structure
+## Objetivo
 
-Inside of your Astro project, you'll see the following folders and files:
+Extender el proyecto astro-campus para practicar la estructura básica de Astro mediante frontmatter, componentes reutilizables, props tipados, renderizado de listas y renderizado condicional.
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Contexto de la práctica
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Esta práctica continúa sobre el proyecto creado en la práctica 01. En este módulo se agregan nuevas páginas y un componente reutilizable para comprender mejor cómo Astro organiza contenido, componentes y rutas.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+El proyecto se amplió con:
 
-Any static assets, like images, can be placed in the `public/` directory.
+una página about.astro
+un componente RecursoCard.astro
+integración del componente en la página principal
+Estructura trabajada
+astro-campus/
+└── src/
+    ├── components/
+    │   └── RecursoCard.astro
+    └── pages/
+        ├── index.astro
+        └── about.astro
 
-## 🧞 Commands
+## Archivos modificados y creados
+src/components/RecursoCard.astro
+src/pages/index.astro
+src/pages/about.astro
 
-All commands are run from the root of the project, from a terminal:
+## Desarrollo realizado
+Paso 1. Crear el componente RecursoCard
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+Se creó un componente reutilizable para mostrar recursos con título, enlace y descripción opcional.
 
-## 👀 Want to learn more?
+Paso 2. Actualizar index.astro
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Se importó RecursoCard en la página principal y se renderizó una lista de recursos usando .map().
+
+Paso 3. Crear about.astro
+
+Se añadió una segunda página con información del proyecto y del equipo.
+
+Paso 4. Renderizado condicional
+
+Se agregó un mensaje dinámico que cambia según si la aplicación está en modo desarrollo o en producción usando import.meta.env.PROD.
+
+## Verificación
+
+Se ejecutó el siguiente comando:
+
+pnpm astro check
+
+## Resultado obtenido:
+
+0 errores
+0 warnings
+0 hints
+
+## Validaciones realizadas
+ Existe src/components/RecursoCard.astro
+ La página principal renderiza los recursos correctamente
+ La ruta /about funciona sin errores
+ pnpm astro check no reporta errores
+ Los estilos del componente se mantienen encapsulados
+ El mensaje de modo desarrollo se muestra correctamente
+Evidencias
+
+## Las capturas se guardaron en assets/.
+
+02-home-recursos.png — página principal con los recursos renderizados
+02-about.png — página /about funcionando correctamente
+Resultado final
+
+## El proyecto ahora cuenta con:
+
+componentes reutilizables
+props tipados
+renderizado de listas con .map()
+renderizado condicional
+múltiples páginas dentro del sistema de rutas de Astro
+
+Esto deja lista la base para continuar con los siguientes módulos.
+
+## Comandos utilizados
+pnpm dev
+pnpm astro check
+pnpm build
+pnpm preview
+Repositorio
+
+Proyecto desarrollado dentro del workspace de prácticas de Programación y Plataformas We
